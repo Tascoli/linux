@@ -3,7 +3,7 @@
 
 ## Instalação dos temas
 
-### Flat Remix 
+### Flat Remix
 
 [Site Flat Remix](https://drasite.com/flat-remix)
 
@@ -32,7 +32,7 @@ Modificar com Tweak Tool > Fontes > Títulos da janela > Hack Regular
 
 ### Instalação do Git
 
-    sudo apt install git 
+    sudo apt install git
 
 Após instalação executar:
 
@@ -55,12 +55,12 @@ Adicionar sua chave no ssh-agent:
 
 Isto serve para que não precise digitar a passphrase todo vez que for logar em algum servidor.
 
-### Silversearcher-ag  
+### Silversearcher-ag
 
-Similar o grep porém mais rápido. 
+Similar o grep porém mais rápido.
 
 Instalação:
-    sudo apt install silversearcher-ag 
+    sudo apt install silversearcher-ag
 
 Para usar basta digitar **ag** a expressão desejada.
 > ex: ps aux | ag bash
@@ -80,9 +80,9 @@ Alguns comandos:
     tmux kill-session -t <num. da sessao deseja> # Mata a sessão escolhida.
 ```
 
-Para mais comando 
+Para mais comando
 
-    man tmux 
+    man tmux
 
 ### TILIX
 
@@ -102,7 +102,7 @@ Antes da instalação dos dotfiles devemos instalar o ruby. Podemos utilizar o c
 
     sudo apt-get install ruby-full
 
-Ou 
+Ou
 
 Fazer a instalação via ASDF
 
@@ -112,11 +112,11 @@ Depois de ter o Ruby instalado vamos aos dotfiles.
 
 Siga a instalação conforme a documentação do repositório.
 
-### VIM 
+### VIM
 
-O vim tem uma tela especial chamada lider, nesta configuração do SKWP, essa tecla é a " , ". 
+O vim tem uma tela especial chamada lider, nesta configuração do SKWP, essa tecla é a " , ".
 
-Ex: 
+Ex:
 - , t - Abre painel inferior;
 
 Se digitarmos Ctrl + P temos o Pallet, a mesma funcionalidade do VSCODE com o Ctrl + Shift + P.
@@ -132,13 +132,13 @@ Acrescente logo após gui font=Hack\ 12 e espaço
 ## Espaços de trabalho
 
 Para enviar janelas para para espaços de trabalho:
-    
+
     Super + Shift + PgDn
 
-Navegar em espaços de trabalho 
+Navegar em espaços de trabalho
 
     Super + PgUp ou PgDn
 
-Dividir a tela ao meio 
+Dividir a tela ao meio
 
     Super + Seta Dir/Esq

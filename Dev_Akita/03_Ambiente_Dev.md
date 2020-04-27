@@ -4,7 +4,7 @@
 
 Instalar os seguintes programas:
 
-    sudo apt install build-essential default-jdk libssl-dev exuberant-ctags ncurses-term fontconfig silversearcher-ag imagemagick libmagickwand-dev software-properties-common vim-gtk3 curl
+    sudo apt install build-essential default-jdk libssl-dev exuberant-ctags ncurses-term fontconfig silversearcher-ag imagemagick libmagickwand-dev software-properties-common curl
 
 
 #### build-essential

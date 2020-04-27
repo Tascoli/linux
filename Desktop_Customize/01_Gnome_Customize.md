@@ -2,33 +2,39 @@
 
 Antes de mais nada devemos instalar os seguintes pacotes:
 
-	sudo apt install gnome-tweak-tool gnome-shell gnome-shell-extensions gnome-shell-extension-dashtodock
+```bash
+sudo apt install gnome-tweak-tool gnome-shell gnome-shell-extensions gnome-shell-extension-dashtodock
+```
 
 ## Em configurações:
 
 - **Mouse**:
 
     - Habilitar click ao tocar
-    - Desmarcar rolagem natural 
+    - Desmarcar rolagem natural
 
 - **Tela**:
 
     - Habilitar luz noturna
-            
+
+- **Região e idioma**:
+
+	- Acrescentar Teclado -> Inglês(Macintoch)
+
 ## Em Ajustes(Tweak-tools):
 
-- **Barra de título da janela**: 
-	
+- **Barra de título da janela**:
+
 	- Habilitar minimizar e maximizar.
 
-- **Teclado e Mouse**: 
-    
+- **Teclado e Mouse**:
+
     - Mudar emulação do mouse para área.
 
-- **Teclado**: 
+- **Teclado**:
 
-    - Adicionar Atalho parao terminal 
-    
+    - Adicionar Atalho parao terminal
+
         > Nome: Terminal,
 
         > Comando: gnome-terminal,
@@ -37,7 +43,8 @@ Antes de mais nada devemos instalar os seguintes pacotes:
 
 - **Fontes**:
 
-    - Títulos da janela 
+    - Títulos da janela
+
         - Hack Regular
 
 Obs: Esta fonte deve ser intalada. Mais adiante será abordado como instalar.
@@ -46,7 +53,7 @@ Obs: Esta fonte deve ser intalada. Mais adiante será abordado como instalar.
 
 - **Dash-to-dock**:
 
-    - Comportamento > Ação do Click > Minimize or overview
+    - Comportamento > Ação do Click > Aumentar Janela
 
     - Aparência > Customize windows counter indicator > Dots
 
@@ -56,15 +63,19 @@ Obs: Esta fonte deve ser intalada. Mais adiante será abordado como instalar.
 
 #### Mundando a posição dos botões:
 
-A esquerda:
+_A esquerda_:
 
-	gsettings set org.gnome.desktop.wm.preferences button-layout 'minimize,maximize,close:'
+```bash
+gsettings set org.gnome.desktop.wm.preferences button-layout 'minimize,maximize,close:'
+```
 
-A direita:
+_A direita_:
 
-	gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
+```bash
+gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
+```
 
-## Extensões favoritas para o GNOME Shell
+### Extensões favoritas para o GNOME Shell
 Para baixar estas extensões é necessário instalar a extensão "***Gnome Extension***" no Firefox ou Google Chrome.
 
 1. Places Status Indicator
@@ -82,19 +93,37 @@ Para baixar estas extensões é necessário instalar a extensão "***Gnome Exten
 
 # Themes
 
-#### Complete Themes
+### My Setup
 
-- [Flat Remix Gnome](https://drasite.com/flat-remix-gnome)
+[Flat Remix Icons](https://github.com/daniruiz/flat-remix)
+
+```bash
+git clone https://github.com/daniruiz/flat-remix.git flat_icons && cd flat_icons && sudo make install &&
+gsettings set  org.gnome.desktop.interface icon-theme 'Flat-Remix-Blue-Dark'
+```
+
+[Flat-remix-gnome](https://github.com/daniruiz/flat-remix-gnome)
+
+```bash
+git clone --branch 20191116 https://github.com/daniruiz/flat-remix-gnome.git && cd flat-remix-gnome && sudo make && sudo make install && gsettings set org.gnome.shell.extensions.user-theme name "Flat-Remix-Dark"
+```
+[Arc Theme](https://github.com/horst3180/arc-theme)
+
+```bash
+sudo apt install arc-theme && gsettings set org.gnome.desktop.interface gtk-theme 'Arc-Dark'
+```
+
+
+### Other Options
+
+
 
 - [Materia Github](https://github.com/nana-4/materia-theme) ou:
 
     sudo apt install materia-gtk-theme
 
-- Arc Theme
+#### GTK
 
-    sudo apt install arc-theme 
-
-### GTK 
 
 - [Plane Gtk-3.20+](https://www.gnome-look.org/p/1181106/)
 
@@ -102,42 +131,36 @@ Para baixar estas extensões é necessário instalar a extensão "***Gnome Exten
 
 - [Gnome-OX-II-2.6](https://www.opendesktop.org/c/1488138467)
 
-### Shell
-
-- X-Arc-Danger(Shell)
-
-- Gnome-OX-IV-Dark-Shell
-
-
-### Icones
+#### Icones
 
 - [Tela Icon](https://github.com/vinceliuice/Tela-icon-theme)
 
-- [Flat Remix Icon Theme](https://github.com/daniruiz/flat-remix)
+---
 
 ### OhMyZSH
 
-```
+```bash
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
+
+---
 
 ### Fontes
 
 ##### Fontes para OhMyZSH
 
-```
-sudo apt install fonts-powerline 
+```bash
+sudo apt install fonts-powerline
 ```
 
 ##### Fonte Akita
 
-```
+```bash
 sudo apt install fonts-hack-ttf
 ```
 
 ##### Instalando Fontes da Microsoft
 
 ```bash
-apt-get install ttf-mscorefonts-installer
+sudo apt-get install ttf-mscorefonts-installer
 ```
-

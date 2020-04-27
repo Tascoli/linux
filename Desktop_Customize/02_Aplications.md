@@ -3,7 +3,7 @@
 ## Importante
 
 ```zsh
-sudo apt install curl wget apt-transport-https dirmngr build-essential default-jdk libssl-dev exuberant-ctags ncurses-term fontconfig silversearcher-ag imagemagick libmagickwand-dev software-properties-common vim-gtk3 
+sudo apt install curl wget apt-transport-https dirmngr build-essential default-jdk libssl-dev exuberant-ctags ncurses-term fontconfig silversearcher-ag imagemagick libmagickwand-dev software-properties-common
 ```
 
 ### GIT
@@ -21,10 +21,13 @@ Após instalação executar:
 
     git config --global user.name "Tadeu Ascoli"
     git config --global user.email "tascoli@gmail.com"
+    git config --global core.editor vim
     git config --global alias.ci commit
     git config --global alias.st status
     git config --global alias.co checkout
     git config --global alias.br branch
+    git config --global alias.hist 'log --graph --oneline --decorate'
+
 
 ### Chaves SSH
 
@@ -101,10 +104,10 @@ sudo apt-get install spotify-client
 ## CHROME
 
 ```zsh
-wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
+wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 ```
 ```zsh
-sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 ```
 ```zsh
 sudo apt-get update
@@ -116,11 +119,11 @@ sudo apt-get install google-chrome-stable
 ### OPERA
 
 ```zsh
-wget -q -O - https://deb.opera.com/archive.key | apt-key add -
+wget -q -O - https://deb.opera.com/archive.key | sudo apt-key add -
 ```
 
 ```zsh
-sh -c 'echo "deb https://deb.opera.com/opera-stable/ stable non-free" >> /etc/apt/sources.list.d/opera-stable.list'
+sudo sh -c 'echo "deb https://deb.opera.com/opera-stable/ stable non-free" >> /etc/apt/sources.list.d/opera-stable.list'
 ```
 
 ```zsh
@@ -131,16 +134,13 @@ sudo apt update
 sudo apt install opera-stable
 ```
 
-# Debian Other Tools
+### Tilix (emulador de terminal).
 
-
-## O Tilix é um avançado emulador de terminal GTK3.
-
-	sudo apt inastall tilix
+    sudo apt inastall tilix
     
 ### Aplicativos CLI
 
-## Instalar Speedtest-cli (verificar a velocidade da internet via terminal)
+#### Instalar Speedtest-cli (verificar a velocidade da internet via terminal)
 
 ```zsh
 wget https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py -O speedtest-cli
@@ -152,17 +152,17 @@ chmod +x speedtest-cli
 sudo mv speedtest-cli /usr/bin/speedtest-cli
 ```
 
-### Colordiff
+#### Colordiff
 
 Programa extremamente útil para comparar dois arquivos
 
-	sudo apt install colordiff
+    sudo apt install colordiff
 
-### Suporte à extração e compressão de arquivos
+#### Suporte à extração e compressão de arquivos
 
 Para poder criar e extrair arquivos compactados no seu Debian, execute o comando abaixo para instalar as ferramentas necessárias:
 
-apt install arc arj cabextract lhasa p7zip p7zip-full p7zip-rar rar unrar unace unzip xz-utils zip
+    sudo apt install arc arj cabextract lhasa p7zip p7zip-full p7zip-rar rar unrar unace unzip xz-utils zip
 
 ### Desconpactadores
 
@@ -183,5 +183,5 @@ Para o Debian Jessie será necessário usar o repositório Backports.
 
 No caso do Debian só funciona atualmente no Debian Sid, a versão estável ainda não tem suporte, quem sabe na próxima versão do Debian, né? Mas se você usa o Debian Sid, basta usar este comando:
 
-$ sudo apt install snapd
+    sudo apt install snapd
 
