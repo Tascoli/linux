@@ -11,7 +11,7 @@ No terminal:
 Depois:
 
     vim /etc/sudoers
-    
+
 Devemos adicionar logo abaixo do usuário root o nome_do_usuario e preencher os demais campos como o do root.
 
 ```bash
@@ -21,11 +21,11 @@ Devemos adicionar logo abaixo do usuário root o nome_do_usuario e preencher os 
 ```
 ## Editar os repositórios
 
-- Abrir terminal  
+- Abrir terminal
 - Logar como root
 
 ```bash
-vi /etc/apt/sources.list 
+vi /etc/apt/sources.list
 ```
 
 - Editar lista de repositórios;
@@ -40,7 +40,7 @@ Erros ao instalar chaves públicas são comuns. Muito frenquentemente acotecem p
 O erro é assim:
 
 ```bash
-W: GPG error: http://ftp.br.debian.org etch Release: The following signatures couldn’t be verified because the public key is not available: NO_PUBKEY 9AA38DCD55BE302B 
+W: GPG error: http://ftp.br.debian.org etch Release: The following signatures couldn’t be verified because the public key is not available: NO_PUBKEY 9AA38DCD55BE302B
 W: There is no public key available for the following key IDs: 9AA38DCD55BE302B
 W: You may want to run apt-get update to correct these problems
 ```
