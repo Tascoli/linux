@@ -108,14 +108,17 @@ sudo apt install zsh -y
 cd /etc/
 sudo sed -i 's/bash/zsh/' passwd # Para as alterações terem efeito é necessário encerrar a sessão.
 
+cd $HOME
+
 if [ ! -d /home/$USER/.oh-my-zsh ]; then
     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 else
     echo "Oh My ZSH já está instalado!!"
 fi
-sed -i '1,12s/robbyrussell/af-magic/' ~/.zshrc
 
-cd $my_pwd
+sed -i '1,12s/robbyrussell/af-magic/' .zshrc
+
+source .zshrc
 
 # Adicionar TMUX
 

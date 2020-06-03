@@ -44,10 +44,13 @@ sudo apt-get update
 sudo apt  install   google-chrome-stable \
                     opera-stable         \
                     spotify-client       \
+                    xfce4-terminal       \
                     code -y
 
-## Favorites APPs
-gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'opera.desktop', 'firefox-esr.desktop', 'org.gnome.Terminal.desktop', 'spotify.desktop']"
+
+
+# Favorites APPs
+gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'opera.desktop', 'firefox-esr.desktop', 'xfce4-terminal.desktop', 'spotify.desktop']"
 
 #Speedtest-cli (verificar a velocidade da internet via terminal)
 

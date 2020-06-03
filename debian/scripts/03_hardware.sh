@@ -5,7 +5,7 @@ clear
 
 # Firmware em falta
 
-sudo apt-get install firmware-linux firmware-linux-nonfree
+sudo apt-get install firmware-linux firmware-linux-nonfree -y
 
 
 # TODO - NVIDIA - Avaliar necessidade e pacotes descritos
