@@ -94,6 +94,20 @@ sudo apt install    fonts-powerline             \
                     fonts-hack-web              \
                     ttf-mscorefonts-installer  -y
 
+# Nerdfonts
+
+cd $HOME
+
+mkdir -p ~/.local/share/fonts
+
+cp ~/linux/debian/fonts/* ~/.local/share/fonts
+
+#cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+
+cd $HOME
+
+fc-cache -vf
+
 
 gsettings set org.gnome.desktop.interface monospace-font-name 'Hack 11'
 gsettings set org.gnome.desktop.interface document-font-name 'Hack 11'
@@ -105,7 +119,9 @@ gsettings set org.gnome.desktop.interface document-font-name 'Hack 11'
 ### OhMyZSH
 
 sudo apt install zsh -y
+
 cd /etc/
+
 sudo sed -i 's/bash/zsh/' passwd # Para as alterações terem efeito é necessário encerrar a sessão.
 
 cd $HOME
